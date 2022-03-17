@@ -49,6 +49,7 @@ class App extends Component {
           </section>
 
           <div className="album py-5 bg-light">
+            <h1>Earthquakes</h1>
             <div className="container">
               <div className="row">
                 <div className="col-12">
