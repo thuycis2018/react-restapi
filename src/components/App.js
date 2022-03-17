@@ -41,7 +41,7 @@ class App extends Component {
           <section className="jumbotron text-center">
             <div className="container">
               <h1 className="jumbotron-heading">React REST API</h1>
-              <p className="lead text-muted">This site is built using React REST API and pull news from newsapi.org.</p>
+              <p className="lead text-muted">This site is built using React REST API and pull data from https://earthquake.usgs.gov/.</p>
               <p>
                 <a href="https://github.com/thuycis2018/react-restapi" title="GitHub Project" className="btn btn-secondary my-2">GitHub Project</a>
               </p>
@@ -51,10 +51,10 @@ class App extends Component {
           <div className="album py-5 bg-light">
             <div className="container">
               <div className="row">
-                <div className="col-8">
+                <div className="col-12">
                   <News news={this.state.news1} />
                 </div>
-                <div className="col-4"><Side news={this.state.news3} /></div>
+                
               </div>
             </div>
           </div>

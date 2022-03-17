@@ -12,15 +12,15 @@ class News extends Component {
   }
 
   componentDidMount() {
-    const url = `https://newsapi.org/v2/${this.props.news.type}?${this.props.news.query}&apiKey=YOURKEY`;
-
+   // const url = `https://newsapi.org/v2/${this.props.news.type}?${this.props.news.query}&apiKey=c77e4ba7a52545d48e09b60e9567587c`;
+    const url='https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson';
     fetch(url)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         this.setState({
-          news: data.articles
+          news: data.features
         })
       })
       .catch((error) => {
@@ -33,7 +33,7 @@ class News extends Component {
   renderItems() {
     if (!this.state.error) {
       return this.state.news.map((item) => (
-        <NewsItem key={item.url} item={item} />
+        <NewsItem key={item.properties.ids} item={item} />
       ));
     } else {
       return <Error />

@@ -13,7 +13,7 @@ class Side extends Component {
   }
 
   componentDidMount() {
-    const url = `https://newsapi.org/v2/${this.props.news.type}?${this.props.news.query}&apiKey=YOURKEY`;
+    const url = `https://newsapi.org/v2/${this.props.news.type}?${this.props.news.query}&apiKey=KEY`;
 
     axios.get(url)
       .then((response) => {
